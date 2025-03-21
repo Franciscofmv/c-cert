@@ -2,7 +2,6 @@
 #include <stdlib.h>
 
 int main(){
-
     // Pointers:
     int k = 10;
     int *p;
