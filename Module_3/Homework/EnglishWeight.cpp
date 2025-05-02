@@ -12,25 +12,23 @@ EnglishWeight::EnglishWeight(){
     this->ounces = 0.0;
     this->pounds = 0;
 }
-EnglishWeight::EnglishWeight(unsigned int lb){
+EnglishWeight::EnglishWeight(int lb){
     this->pounds = lb;
     this->ounces = lb*16.0; 
 }
 EnglishWeight::EnglishWeight(double oz){
-    if(oz >= 0){
-        this->ounces = oz;
-        this->pounds = (int)(oz/16.0);
-    }else
-        std::cerr << "Ounces must be greater than or equal to zero.";
+    this->ounces = oz;
+    this->pounds = (int)(oz/16.0);
+
 }
-EnglishWeight::EnglishWeight(unsigned int lb, double oz){
+EnglishWeight::EnglishWeight(int lb, double oz){
     this->pounds = lb;
     this->ounces = oz;
 }
 
 // Streams overloads:
 std::ostream& operator << (std::ostream & str, EnglishWeight& rhs){
-    str << rhs.pounds <<" lb\n" << rhs.ounces <<" oz";
+    str << rhs.pounds <<" lb" << " and " << rhs.ounces <<" oz";
     return str;
 }
 std::istream& operator >> (std::istream& str, EnglishWeight& rhs)
@@ -97,7 +95,7 @@ EnglishWeight operator *(double x, EnglishWeight &obj){
     return EnglishWeight(x * obj.pounds, x * obj.ounces);
 }
 // Dividing by int:
-EnglishWeight EnglishWeight::operator /(unsigned int x) const{
+EnglishWeight EnglishWeight::operator /(int x) const{
     int divlb = this->pounds / x;
     double divoz = this->ounces / x;
     return EnglishWeight(divlb, divoz);

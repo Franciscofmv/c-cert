@@ -12,15 +12,15 @@
 
 class EnglishWeight{
     private:
-        unsigned int pounds;
+        int pounds;
         double ounces;
 
     public:
         // Constructors
         EnglishWeight();
-        EnglishWeight(unsigned int lb);
+        EnglishWeight(int lb);
         EnglishWeight(double oz);
-        EnglishWeight(unsigned int lb, double oz);
+        EnglishWeight(int lb, double oz);
 
         // Overload istream and ostream:
         friend std::ostream& operator << (std::ostream &str, EnglishWeight &rhs);
@@ -30,7 +30,7 @@ class EnglishWeight{
         EnglishWeight operator +(EnglishWeight & rhs) const;
         EnglishWeight operator -(EnglishWeight & rhs) const;
         double operator /(EnglishWeight &rhs) const;
-        EnglishWeight operator/(unsigned int number) const;
+        EnglishWeight operator/(int number) const;
         EnglishWeight operator/(double number) const;
         EnglishWeight operator *(double &x) const;
         friend EnglishWeight operator *(double x, EnglishWeight &obj);
