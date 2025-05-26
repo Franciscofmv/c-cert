@@ -1,5 +1,5 @@
-#ifndef DISTANCE_H
-#define DISTANCE_H
+#ifndef DISTANCE_H_
+#define DISTANCE_H_
 
 #include <iostream>
 
@@ -8,8 +8,8 @@ class Distance{
     double inches;
 
     public:
-        Distance(){feet = 0; inches = 0.0;};
-        Distance(int ft, double in){feet = ft; inches = in;};
+        Distance();
+        Distance(int ft, double in);
 
         // Distance + Distance
         Distance operator + (Distance & rhs);

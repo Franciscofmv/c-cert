@@ -1,10 +1,12 @@
-// FILENAME: EnglishWeight.h
-// PROGRAMMER: Francisco Moyet
-// DATE:
-// COMPILER:
-// REQUIRED:
-// PURPOSE:
-
+// FILENAME: EW_Driver.cpp
+// PROGRAMMER: Francisco Moyet Vargas
+// DATE: 05/02/2025
+// COMPILER: Apple clang version 15.0.0 (clang-1500.3.9.4)
+// REQUIRED: EnglishWeight.h, EnglishWeight.cpp
+// PURPOSE: 
+//          Define two EnglishWeight objects.
+//          Test the overloaded operators (+, /, *, <<, >>) 
+//          with the two objects.
 #include <iostream>
 #include "EnglishWeight.h"
 
@@ -24,6 +26,7 @@ int main(){
     std::cout << "\n\n...write a double type number...\n";
     std::cin >> number;
 
+    std::cout << "\n...Results:\n";
     //EnglishWeight1 + EnglishWeight2
     result = engWeight1 + engWeight2;
     std::cout << "EnglishWeight1 + EnglishWeight2 = " << result << "\n\n";

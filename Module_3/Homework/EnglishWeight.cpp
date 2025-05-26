@@ -1,9 +1,11 @@
-// FILENAME: EnglishWeight.h
-// PROGRAMMER: Francisco Moyet
-// DATE:
-// COMPILER:
-// REQUIRED:
+// FILENAME: EnglishWeight.cpp
+// PROGRAMMER: Francisco Moyet Vargas
+// DATE: 05/02/2025
+// COMPILER: Apple clang version 15.0.0 (clang-1500.3.9.4)
+// REQUIRED:EnglishWeight.cpp, EnglishWeight.h
 // PURPOSE:
+//          Define the member functions and constructors of the
+//          EnglishWeight class. 
 
 #include "EnglishWeight.h"
 
