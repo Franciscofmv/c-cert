@@ -60,11 +60,13 @@ class	DoubleStack
 		// Display the stack to the user.
 	void display();
 	
+
+	
 	private:
 		double	*data;		// Pointer to dynamic stack area.
 		size_t	stack_size;	//
 		size_t	tos;		// Top of stack. tos==0 ==> empty stack.
-		unsigned int stack_capacity;
+		size_t stack_capacity;
 };
 
 #endif
