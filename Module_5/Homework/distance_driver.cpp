@@ -1,3 +1,15 @@
+// FILENAME: distance_driver.cpp
+// PROGRAMMER: Francisco Moyet Vargas
+// DATE: 06/18/2025
+// COMPILER: Apple clang version 15.0.0 (clang-1500.3.9.4)
+// REQUIRED: distance_driver.cpp, imperial_units.h, international_units.h
+// PURPOSE:
+//          Allow the user to enter in the two types of distances
+//          and then display the conversions for each entry:
+//          Furlongs, yards and feet (Imperial Units)
+//          Kilometers and meters (International Units)
+
+
 #include <iostream>
 #include "imperial_units.h"
 #include "international_units.h"

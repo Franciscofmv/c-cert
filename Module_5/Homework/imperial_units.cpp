@@ -1,3 +1,14 @@
+// FILENAME: imperial_units.cpp
+// PROGRAMMER: Francisco Moyet Vargas
+// DATE: 06/18/2025
+// COMPILER: Apple clang version 15.0.0 (clang-1500.3.9.4)
+// REQUIRED: imperial_units.cpp, imperial_units.h, international_units.h
+// PURPOSE:
+//          Define the implementation of the member functions
+//          of the ImperialUnits class and define the conversion
+//          Allow the conversion of ImperialUnits class instances to
+//          InternationalUnits class instances and viceversa.
+
 #include <iostream>
 #include "imperial_units.h"
 #include "international_units.h"
