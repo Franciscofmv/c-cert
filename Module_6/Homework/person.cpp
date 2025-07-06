@@ -40,7 +40,19 @@ string Person::get_address(){
 string Person::get_phone(){
     return home_phone_number;
 }
-
+    // Get social security number:
 string Person::get_ssn(){
     return ssn;
+}
+void Person::change_name(string& x){
+    name = x;
+}
+void Person::change_gender(string& x){
+    gender = x;
+}
+void Person::change_address(string& x){
+    address = x;
+}
+void Person::change_phone(string& x){
+    home_phone_number = x;
 }

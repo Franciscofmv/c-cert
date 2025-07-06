@@ -4,9 +4,7 @@
 
 #ifndef DEPENDENT_H_
 #define DEPENDENT_H_
-class Dependent : Person{
-    protected:
-    public:
+class Dependent : public Person{
 
 
 };

@@ -18,7 +18,7 @@ class Person{
         Person();
         Person(string name, string birth_date, string gender, string ssn, 
             string address, string home_phone);
-            
+
             // Get attributes values:
         string get_name();
         string get_dob();
@@ -28,9 +28,9 @@ class Person{
         string get_ssn();
 
             // Change attributes:
-        void change_name();    
-        void change_gender();
-        void change_address();
-        void change_phone();
+        void change_name(string& x);    
+        void change_gender(string& x);
+        void change_address(string& x);
+        void change_phone(string& x);
 };
 #endif
