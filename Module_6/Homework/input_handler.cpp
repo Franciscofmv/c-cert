@@ -144,7 +144,7 @@ void employee_menu(int& input, Employee* ee){
         cout << "17. Change work phone."        << endl;
         cin >> input;
         if (input == 0){
-            cout << "\n*** Exiting Person Menu ***\n" << endl;
+            cout << "\n*** Exiting Employee Menu ***\n" << endl;
             break;
         }
         else if (input == 1){
@@ -276,7 +276,7 @@ void dependent_menu(int& input, Dependent* dd){
         cout << "10. Change home phone."            << endl;
         cin >> input;
         if (input == 0){
-            cout << "\n*** Exiting Person Menu ***\n" << endl;
+            cout << "\n*** Exiting Dependent Menu ***\n" << endl;
             break;
         }
         else if (input == 1){
