@@ -1,12 +1,12 @@
 //*********************************************
-// FILENAME: 
+// FILENAME: boat.h
 // PROGRAMMER: Francisco Moyet Vargas
-// DATE: 
+// DATE: 07/19/2025
 // COMPILER: Apple clang version 15.0.0 (clang-1500.3.9.4)
-// REQUIRED: 
-// PURPOSE: 
+// REQUIRED: boat.h, boat.cpp, vehicle.h, vehicle.cpp, 
+// PURPOSE: Interface for the class Boat. Define constructors
+//          and methods of the Boat class. 
 //*********************************************
-
 #include <iostream>
 #include "vehicle.h"
 

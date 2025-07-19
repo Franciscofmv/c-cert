@@ -1,10 +1,11 @@
 //*********************************************
-// FILENAME: 
+// FILENAME: boat.cpp
 // PROGRAMMER: Francisco Moyet Vargas
-// DATE: 
+// DATE: 07/19/2025
 // COMPILER: Apple clang version 15.0.0 (clang-1500.3.9.4)
-// REQUIRED: 
-// PURPOSE: 
+// REQUIRED: boat.cpp, boat.h, vehicle.h, vehicle.cpp
+// PURPOSE: Define implementation of the 
+//          constructor and methods of the Boat class.
 //*********************************************
 
 
@@ -18,5 +19,5 @@ Boat::Boat(string& id, double& empty_w, double& max_gross_w, double& range_max, 
 }
     // Get transportation mode:
 string Boat::get_trans_mode(){
-    return "Water";
+    return "by-water";
 }

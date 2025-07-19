@@ -1,10 +1,11 @@
 //*********************************************
-// FILENAME: 
+// FILENAME: car.h
 // PROGRAMMER: Francisco Moyet Vargas
-// DATE: 
+// DATE: 07/19/2025
 // COMPILER: Apple clang version 15.0.0 (clang-1500.3.9.4)
-// REQUIRED: 
-// PURPOSE: 
+// REQUIRED: car.h, car.cpp, vehicle.h, vehicle.cpp, 
+// PURPOSE: Interface for the class Car. Define constructors
+//          and methods of the Car class. 
 //*********************************************
 
 #include <iostream>
@@ -20,6 +21,7 @@ class Car : public Vehicle{
         Car(string id, double empty_w, double max_gross_w, double range_max, double speed_max);
             // Get transportation mode:
          string get_trans_mode();
+         
 
 };
 
