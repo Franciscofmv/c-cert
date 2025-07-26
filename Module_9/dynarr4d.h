@@ -44,7 +44,7 @@
       }
       array_size = size;
       for (i=0; i<array_size; ++i)
-        MODIFICATION: eliminate data[i] = 0;
+        data[i] = 0;
    }
   
  // Destructor.

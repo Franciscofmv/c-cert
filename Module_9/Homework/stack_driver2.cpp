@@ -14,8 +14,8 @@
 
 
 int main(){
-    UserStack<int> stack_1(10);
-    UserStack<int> stack_2(10);
+    UserStack<double> stack_1(10);
+    UserStack<double> stack_2(10);
 
     // Creating user menu:
     int option = 0;
@@ -44,11 +44,11 @@ int main(){
             stack_1.display();
         }
         else if(option == 2){
-            int new_int=0.0;
+            double new_double=0.0;
             std::cout << "\n****\n";
             std::cout << "Enter a number: ";
-            if (std::cin >> new_int){
-            stack_1.push(new_int);
+            if (std::cin >> new_double){
+            stack_1.push(new_double);
             std::cout << "\n****\n\n";
             }
             else{
@@ -61,7 +61,7 @@ int main(){
             }
         }
         else if (option == 3){
-            int pop_d=0.0;
+            double pop_d=0.0;
             std::cout << "\n****\n";
             if (stack_1.size()){
                 stack_1.pop(pop_d);

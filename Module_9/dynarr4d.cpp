@@ -14,7 +14,7 @@
    using std::endl;
    int main(void)
    {
-    DynamicArray<int>       x(12);
+    DynamicArray       x(12);
     DynamicArray<double>   *q;
     long                    i;
 

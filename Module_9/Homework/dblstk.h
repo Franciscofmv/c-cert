@@ -1,8 +1,8 @@
 // MODULE:		dblstk1.h
-// PROGRAMMER:	Gary J. Blair
+// PROGRAMMER:	Gary J. Blair, Francisco Moyet Vargas
 // LANGUAGE:	C++
-// DATE:		96/07/0
-//
+// DATE:		96/07/0, 07/26/25
+// COMPILER: Apple clang version 15.0.0 (clang-1500.3.9.4)
 // PURPOSE:
 //		Declarations for class UserStack template.
 
