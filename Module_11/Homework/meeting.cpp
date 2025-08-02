@@ -1,15 +1,23 @@
+//*********************************************
+// FILENAME: meeting.cpp
+// PROGRAMMER: Francisco Moyet Vargas
+// DATE: 08/02/2025
+// COMPILER: Apple clang version 15.0.0 (clang-1500.3.9.4)
+// REQUIRED: meeting.h, meeting.cpp
+// PURPOSE: Implementation of the member functions of the 
+//          Meeting class.
+//*********************************************
 #include <iostream>
 #include "meeting.h"
 using std::cout;
 using std::endl;
 
-    // Constructors:
-
-Meeting::Meeting(string loc, string prson, int mm, int dd, int yr, int hr, int mn){
+    // Constructor:
+Meeting::Meeting(string loc, string prson, unsigned int mm, unsigned int dd, 
+            unsigned int yr, unsigned int hr, unsigned int mn){
     location = loc;
     person = prson;
     month = mm;
-    
     day = dd;
     year = yr;
     hour = hr;
@@ -60,15 +68,14 @@ int Meeting::CompareByInsertKey( ListItem* item_in_list )
 } 
     // Print:
 void Meeting::print(){
-    cout << "*** Meeting info: " << endl;
     cout << "   Location: " << this->location << endl;
     cout << "   Meeting with: " << this->person << endl;
-    cout << "   Date (month-day-year): " 
+    cout << "   Date: " 
         << this->month << "-" 
         << this->day << "-" 
         << this->year << endl;
-    cout << "   Time (24hr format hrs:mn): " << this->hour << ":" << this->minutes << endl;
-
+    cout << "   Time: " << this->hour << ":" << this->minutes << endl;
+    cout << "\n";
 }
     //Clone
 ListItem* Meeting::Clone()

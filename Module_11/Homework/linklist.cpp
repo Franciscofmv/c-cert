@@ -105,7 +105,7 @@ int List::Delete( void *deleted_item_key, COMPARATOR c )
    ListItem *search; // Ptr to traverse
                       // each item in list.
     
-   if (search=Find(deleted_item_key,c))
+   if ((search=Find(deleted_item_key,c)))
     {
        Delete(search);
        return 1;
@@ -127,7 +127,7 @@ int List::Delete( void *deleted_item_key, COMPARATOR c )
        return NULL;
 
     iter = new ListIterator(*this);
-    while (p=(iter->NextItemInList()))
+    while ((p=(iter->NextItemInList())))
     {
        pdup = p->Clone();
        if (! pdup)

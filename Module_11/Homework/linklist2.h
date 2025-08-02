@@ -17,7 +17,7 @@
 class List;               // Tracks the first and
                         // last items
                         // in a list.
-class ListItem;           // Stores the actual
+template <class T >class ListItem;           // Stores the actual
                         // items in the list.
 class ListIterator;       // Used to loop over all
                         // items in a list.
@@ -39,6 +39,7 @@ typedef int (*COMPARATOR)( ListItem*  item_in_list, void* search_key );
       ListItem and defining a CompareByInsertKey
       member function. */
 
+template <class T> 
 class ListItem // ADT
 {
    friend class List;
@@ -57,7 +58,7 @@ class ListItem // ADT
          of these two ListItems, returning a value
          in the usual manner for comparators
          (e.g. strcmp). */
-   virtual int CompareByInsertKey ( ListItem* item_in_list ) = 0;
+   virtual T CompareByInsertKey ( ListItem* item_in_list ) = 0;
 
       // Clone the item.
    virtual ListItem* Clone() = 0;
@@ -125,8 +126,10 @@ class List
                            // check for 
                            // iterators.
 
-   unsigned long NextGeneration(){return ++generation;};
-   unsigned long GetGeneration(){return generation;};
+   unsigned long NextGeneration()
+      {return ++generation;};
+   unsigned long GetGeneration()
+      {return generation;};
 };
 
 
@@ -168,7 +171,8 @@ class ListIterator
 class  IteratorException
 {
    public:
-   IteratorException( List& l ){ iterated_list = &l; };
+   IteratorException( List& l )
+      { iterated_list = &l; };
 
    List* iterated_list;   // List exception
                         // occurred on.

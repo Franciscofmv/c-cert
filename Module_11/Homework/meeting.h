@@ -1,6 +1,16 @@
+//*********************************************
+// FILENAME: meeting.h
+// PROGRAMMER: Francisco Moyet Vargas
+// DATE: 08/02/2025
+// COMPILER: Apple clang version 15.0.0 (clang-1500.3.9.4)
+// REQUIRED: meeting.h, meeting.cpp
+// PURPOSE: Interface for the Meeting class. 
+//*********************************************
 #include <iostream>
 #include "linklist.h"
+
 using std::string;
+
 #ifndef MEETING_H_
 #define MEETING_H_
 class Date;
@@ -8,15 +18,17 @@ class Date;
 class Meeting : public ListItem{
     protected:
         string location;
-        int month;
-        int day;
-        int year;
-        int hour;
-        int minutes;
+        unsigned int month;
+        unsigned int day;
+        unsigned int year;
+        unsigned int hour;
+        unsigned int minutes;
         string person;
-        friend int CompareDateTime( ListItem*  item_in_list, void* search_key );
     public:
-        Meeting(string loc, string prson, int mm, int dd, int yr, int hr, int mn);
+        Meeting(
+            string loc, string prson, unsigned int mm, unsigned int dd, 
+            unsigned int yr, unsigned int hr, unsigned int mn
+        );
         virtual int CompareByInsertKey( ListItem* item_in_list );
         virtual ListItem* Clone();
         void print();

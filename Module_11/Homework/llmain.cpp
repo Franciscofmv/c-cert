@@ -57,10 +57,10 @@ while (p=(Person *)(iter->NextItemInList()))
     p->print();
 delete iter;
 
-l.Delete(p2);
-p4->Delete();
-ssn = 888777666;
-l.Delete(&ssn, CompareSSN); 
+// l.Delete(p2);
+// p4->Delete();
+// ssn = 888777666;
+// l.Delete(&ssn, CompareSSN); 
 
 cout<<"\nAfter deleting Jones, Adams, and Zwakenbergthe list is\n\n";
 iter = new ListIterator(l);
