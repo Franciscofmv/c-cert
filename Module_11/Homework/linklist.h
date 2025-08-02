@@ -46,8 +46,7 @@ class ListItem // ADT
 
    public:
             // Constructor
-         ListItem() {inserted=0; next=prev=NULL;
-               plist=NULL;};
+         ListItem() {inserted=0; next=prev=NULL;plist=NULL;};
 
       /* CompareByInsertKey is invoked upon
          something derived from ListItem, which we
@@ -168,9 +167,9 @@ class ListIterator
 class  IteratorException
 {
    public:
-   IteratorException( List& l ){ iterated_list = &l; };
+      IteratorException( List& l ){ iterated_list = &l; };
 
-   List* iterated_list;   // List exception
+      List* iterated_list;   // List exception
                         // occurred on.
 };
 

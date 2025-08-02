@@ -48,29 +48,33 @@ l.Insert(p7);
 iter = new ListIterator(l);
 while (p=(Person *)(iter->NextItemInList()))
     p->print();
-delete iter;
 
 cloned_list = l.Clone();
-cout << "The cloned list:\n";
-iter = new ListIterator(*cloned_list);
-while (p=(Person *)(iter->NextItemInList()))
-    p->print();
-delete iter;
+// cout << "The cloned list:\n";
+// iter = new ListIterator(*cloned_list);
+// while (p=(Person *)(iter->NextItemInList()))
+//     p->print();
+// delete iter;
 
-// l.Delete(p2);
+l.Delete(p2);
 // p4->Delete();
 // ssn = 888777666;
 // l.Delete(&ssn, CompareSSN); 
 
-cout<<"\nAfter deleting Jones, Adams, and Zwakenbergthe list is\n\n";
-iter = new ListIterator(l);
-while (p=(Person *)(iter->NextItemInList()))
-    p->print();
-delete iter; 
-ssn = 889922336;
-p = (Person *)(l.Find(&ssn,CompareSSN));
-cout
-<< "\nResult of searching for SSN 889922336 is"
-<< endl;
+// cout<<"\nAfter deleting Jones, Adams, and Zwakenbergthe list is\n\n";
+// iter = new ListIterator(l);
+// while (p=(Person *)(iter->NextItemInList()))
+//     p->print();
+// l.Insert(p8);
+
+// delete iter; 
+// ssn = 889922336;
+// while (p=(Person *)(iter->NextItemInList()))
+//     p->print();
+
+// p = (Person *)(l.Find(&ssn,CompareSSN));
+// cout
+// << "\nResult of searching for SSN 889922336 is"
+// << endl;
 p->print();
 }

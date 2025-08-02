@@ -151,9 +151,9 @@ int List::Delete( void *deleted_item_key, COMPARATOR c )
    ListItem *rv; // Return value - ptr to
                   // next item.
     
-    // if (generation != l->GetGeneration())
-    // The list changed!
-    // throw IteratorException(*l);
+    if (generation != l->GetGeneration()){
+    throw IteratorException(*l);
+   }
 
     rv = next_item;
     if (next_item)

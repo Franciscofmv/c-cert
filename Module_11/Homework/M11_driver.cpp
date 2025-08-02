@@ -21,6 +21,7 @@ int main(void)
     Meeting        *m, *m1,*m2,*m3,*m4,*m5,*m6,*m7;
     List           l;
     ListIterator  *iter; 
+    List *l2;
 
         // Interview sessions:
     cout << "\n***Inserting unordered Meetings*** " << endl;
@@ -49,8 +50,14 @@ int main(void)
         // Print ordered LinkedList:
     cout << "\n\n\nOrdered list: " << endl;
     iter = new ListIterator(l);
+    while ((m=(Meeting *)(iter->NextItemInList()))){
+        m->print();}
+    // delete iter;
+    
+    l2 = l.Clone();
+    l.Delete(m2);
+    // iter = new ListIterator(*l2);
     while ((m=(Meeting *)(iter->NextItemInList())))
         m->print();
-    delete iter;
-
+    
 }
