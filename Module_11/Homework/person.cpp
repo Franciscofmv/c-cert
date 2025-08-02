@@ -25,8 +25,7 @@ ListItem* Person::Clone()
 int Person::CompareByInsertKey
    ( ListItem* item_in_list )
 {
-   return strcmp(this->name,
-               ((Person *)item_in_list)->name);
+   return strcmp(this->name, ((Person *)item_in_list)->name);
 } 
 
 void Person::print()

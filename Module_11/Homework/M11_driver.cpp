@@ -5,18 +5,11 @@
 #include      <iostream>  
 #include      <string.h>
 #include      "linklist.h"
-#include      "person.h"
 using std::cout;
 using std::endl;
 using std::cerr;
 
-int CompareSSN( ListItem*  item_in_list, void* search_key )
-{
-   unsigned long left = ((Person *)item_in_list)->ssn;
-   unsigned long right = *((unsigned long *) search_key);
-   return (left < right) ? -1 : (left > right) ?  1 :0 ; 
-}
-
+int CompareDateTime( ListItem*  item_in_list, void* search_key );
 int main(void)
 {
 Meeting        *m, *m1,*m2,*m3,*m4,*m5,*m6,*m7;
@@ -25,47 +18,77 @@ ListIterator  *iter;
 unsigned long  ssn;
 List          *cloned_list;
 
-p1 = new Person("Kmetz, Rhonda",889922336);
-l.Insert(p1);
-p2 = new Person("Jones, Tom", 122334455);
-l.Insert(p2); 
-p3 = new Person("Phillips, Bob",545667887);
-l.Insert(p3);
-p4 = new Person("Adams, Don", 999997777);
-l.Insert(p4);
-p5 = new Person("Zwakenberg, Rich", 888777666);
-l.Insert(p5);
-p6 = new Person("Blair, Gary", 777666321);
-l.Insert(p6);
-p7 = new Person("Johnson, Bill", 221835412);
-l.Insert(p7);
+    // Interview sessions:
+m1 = new Meeting("Orlando, FL", "Kmetz, Rhonda",9,15,2025, 12, 0);
+l.Insert(m1);
+m2 = new Meeting("Zoom", "Jones, Tom", 9, 15, 2025, 11, 0);
+l.Insert(m2); 
+m3 = new Meeting("Zoom", "Phillips, Bob", 9, 15, 2025, 8,0);
+l.Insert(m3);
+m4 = new Meeting("Orlando, FL", "Adams, Don", 9, 16, 2025, 16, 30);
+l.Insert(m4);
+m5 = new Meeting("Teams", "Zwakenberg, Rich", 9, 16, 2025, 15, 30);
+l.Insert(m5);
+m6 = new Meeting("Orlando, FL", "Blair, Gary", 9, 16, 2025, 13, 0);
+l.Insert(m6);
+m7 = new Meeting("Orlando, FL", "Johnson, Bill", 9, 15, 2025, 15, 30);
+l.Insert(m7);
 
 iter = new ListIterator(l);
-while (p=(Person *)(iter->NextItemInList()))
-    p->print();
+while (m=(Meeting *)(iter->NextItemInList()))
+    m->print();
 delete iter;
 
 cloned_list = l.Clone();
 cout << "The cloned list:\n";
 iter = new ListIterator(*cloned_list);
-while (p=(Person *)(iter->NextItemInList()))
-    p->print();
+while (m=(Meeting *)(iter->NextItemInList()))
+    m->print();
 delete iter;
 
-l.Delete(p2);
-p4->Delete();
-ssn = 888777666;
-l.Delete(&ssn, CompareSSN); 
+// l.Delete(p2);
+// p4->Delete();
+// ssn = 888777666;
+// l.Delete(&ssn, CompareSSN); 
 
-cout<<"\nAfter deleting Jones, Adams, and Zwakenbergthe list is\n\n";
-iter = new ListIterator(l);
-while (p=(Person *)(iter->NextItemInList()))
-    p->print();
-delete iter; 
-ssn = 889922336;
-p = (Person *)(l.Find(&ssn,CompareSSN));
-cout
-<< "\nResult of searching for SSN 889922336 is"
-<< endl;
-p->print();
+// cout<<"\nAfter deleting Jones, Adams, and Zwakenbergthe list is\n\n";
+// iter = new ListIterator(l);
+// while (p=(Meeting *)(iter->NextItemInList()))
+//     p->print();
+// delete iter; 
+// ssn = 889922336;
+// p = (Meeting *)(l.Find(&ssn,CompareSSN));
+// cout
+// << "\nResult of searching for SSN 889922336 is"
+// << endl;
+// p->print();
+}
+
+int compareResult(unsigned int& left, unsigned int& right){
+   if (left < right){
+        return -1;
+   }
+   else if (left > right){
+        return 1;
+   }
+   else{
+    return 0;
+   }
+}
+
+int CompareDateTime( ListItem*  item_in_list, void* search_key )
+{       // Compare year:
+   unsigned int left = ((Meeting *)item_in_list)->year;
+   unsigned int right = *((unsigned long *) search_key);
+   int result=2;
+   result = compareResult(left, right);
+   if (result != 0){
+    return result;
+   }
+        // Compare month:
+    left = ((Meeting *)item_in_list)->year;
+    right = *((unsigned long *) search_key);
+    
+
+   return (left < right) ? -1 : (left > right) ?  1 :0 ; 
 }

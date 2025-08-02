@@ -19,12 +19,12 @@
 class Person : public ListItem
 {
     public:
-    Person( char *s, unsigned long id ) {strcpy(name,s); ssn=id;};
-    virtual int CompareByInsertKey( ListItem* item_in_list );
-    virtual void print();
-    virtual ListItem* Clone();
+      Person( char *s, unsigned long id ) {strcpy(name,s); ssn=id;};
+      virtual int CompareByInsertKey( ListItem* item_in_list );
+      virtual void print();
+      virtual ListItem* Clone();
 
-    char name[50]; // Person's name.
+      char name[50]; // Person's name.
 
     private:
       unsigned long ssn; // Social security number.  

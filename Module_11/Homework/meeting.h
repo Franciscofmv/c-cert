@@ -14,11 +14,12 @@ class Meeting : public ListItem{
         int hour;
         int minutes;
         string person;
+        friend int CompareDateTime( ListItem*  item_in_list, void* search_key );
     public:
-        Meeting(string loc, string prson, int& mm, int& dd, int& yr, int& hr, int& mn);
+        Meeting(string loc, string prson, int mm, int dd, int yr, int hr, int mn);
         virtual int CompareByInsertKey( ListItem* item_in_list );
-        virtual void print();
         virtual ListItem* Clone();
+        void print();
 };
 
 #endif
